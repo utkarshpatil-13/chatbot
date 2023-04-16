@@ -36,8 +36,8 @@ const rendermessage = (txt) => {
     arbody.append(message_arrived);
 };
 
-const decodebotsmessage = (txt) => {
-    const res = getbotresponse(txt);
+const decodebotsmessage = async (txt) => {
+    const res = await getbotresponse(txt);
     let bots_message = document.createElement("div");
     let text_node = document.createTextNode(res);
     bots_message.classList.add("message-by-bot");
@@ -45,20 +45,31 @@ const decodebotsmessage = (txt) => {
     arbody.append(bots_message);
 }
 
-const getbotresponse = (txt) => {
-    if(responseObj[txt] == undefined){
-        return "answer not availabel";
+const getbotresponse = async (txt) =>  {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+    "input_text": txt
+    });
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+    };
+
+    
+
+    response = await fetch("http://127.0.0.1:8080/artibot/", requestOptions)
+    result = ""
+
+    if (response.ok) {
+        await response.json().then( json => {
+            result = json['ans'];
+      });
     }
-    else{
-        return responseObj[txt];
-    }
+
+    console.log( result );
+    return result;
 };
-
-
-const responseObj = {
-    hello : 'hey',
-    hey : 'do you want something',
-    "what is artimus" : 'It is a event held by pccoe AIMSA Students which is having very much exciting competitions to participate in',
-    "which event should I take part in" : "Hackmatrix"
-}
-
