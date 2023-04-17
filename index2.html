@@ -15,79 +15,74 @@
         <script src="index.js" defer></script>
         <script src="chatresponse.js" defer></script>
         <!-- Defer is used because this loads the javascript as soon as the html is loaded -->
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <style>
+            .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 20,
+              'wght' 900,
+              'GRAD' 0,
+              'opsz' 48
+            }
+            .material-symbols-outlined{
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+                border: none;
+                color: coral;
+                background-color: white;
+                padding-right: 0px;
+            }
+            </style>
         
 </head>
 <body>
     
-    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">ARTIMAS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"> <img src="chat_logo.png" alt="" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                ARTIMUS CHATBOT
+            </a>
+            <button class="navbar-toggler btn btn-outline-dark " type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Artimas</a>
+                        <a class="nav-link" target="_blank" href="http://www.pccoepune.com/">PCCOE</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" target="_blank" href="https://pccoeaimsa.org" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Artimus
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" target="_blank" href="https://pccoeaimsa.org">Events</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="https://pccoeaimsa.org">Team</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" target="_blank" href="https://pccoeaimsa.org">Connect</a></li>
+                        </ul>
                     </li>
+                    <!-- <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+                <!-- <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success justify-content-end" type="submit">Search</button>
+            </form> -->
+            </div>
         </div>
-    </div>
-</nav> -->
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"> <img src="chat_logo.png" alt="" width="30" height="24"
-                class="d-inline-block align-text-top">
-            ARTIMUS CHATBOT
-        </a>
-        <button class="navbar-toggler btn btn-outline-dark " type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="http://www.pccoepune.com/">PCCOE</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" target="_blank" href="https://pccoeaimsa.org" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Artimus
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" target="_blank" href="https://pccoeaimsa.org">Events</a></li>
-                        <li><a class="dropdown-item" target="_blank" href="https://pccoeaimsa.org">Team</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" target="_blank" href="https://pccoeaimsa.org">Connect</a></li>
-                    </ul>
-                </li>
-                <!-- <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li> -->
-            </ul>
-            <!-- <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success justify-content-end" type="submit">Search</button>
-        </form> -->
-        </div>
-    </div>
 </nav>
 
 <!-- 
@@ -108,7 +103,7 @@
             <input type="text" name="" id="user-input" placeholder="ask the question!" autofocus>
         </div>
         <div class="send">
-            <button type="button" class="btn btn-outline-primary">Send</button>
+            <button type="button" class="material-symbols-outlined">Send</button>
         </div>
     </div>
 </div>
