@@ -1,6 +1,6 @@
 .body{
     font-family: 'Montserrat', sans-serif;;
-    background: rgb(134, 134, 240);
+    /* background: rgb(134, 134, 240); */
 }
 
 /* reseting the margin and padding */
@@ -12,27 +12,33 @@
 }
 
 .container{
-    height: 400px;
-    width: 400px;
+    height: 100%;
+    width: 100%;
     background-color: white;
-    margin: 90px auto;
+    margin: 40px auto;
     box-shadow: 0px 0px 20px 0px black;
+    border-radius: 20px;
 }
 
 .ar-header{
-    /* width: 100%; */
-    background-color: brown;
-    color: white;
+    padding: 10px 2px;
+    width: 100%;
+    background-color: coral;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px black;
 }
 
 .title{
-    width: 258px;
+    width: 315px;
     margin: auto;
     font-style: italic;
+    font-size: large;
+    font-weight: bold;
+    color: white;
 }
 
 .ar-body{
-    height: 300px;
+    height: 385px;
     display: flex;
     padding: 10px;
     flex-direction: column;
@@ -44,13 +50,17 @@
 }
 
 .ar-input{
+    border-top: 1px solid black;
+    /* border-bottom: 1px solid black; */
+    padding-bottom: 20px;
     height: 60px;
     display: flex;
     align-items: center;
+    /* border: none; */
 }
 
 .myinput{
-    flex: 9;
+    flex: 18;
     /* The textbox is given maximum of the flexes */
 }
 
@@ -61,7 +71,8 @@
 }
 
 #user-input{
-    border: 2px solid black;
+    border: none;
+    border-radius: 20px;
     padding: 6px 10px;
     line-height: 5px;
     outline: none;
@@ -69,9 +80,9 @@
 }
 
 .message-by-user{
-    background-color: antiquewhite;
+    background-color: rgb(154, 231, 154);
     margin: 10px;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
 }
 
